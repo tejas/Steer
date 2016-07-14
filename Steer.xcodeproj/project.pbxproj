@@ -1,0 +1,706 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9E893660B7BAE4054205D927 /* libPods-Steer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1085E8E7EAEDB064B48A0DED /* libPods-Steer.a */; };
+		E6124D361D2E664000B0C45D /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6124D351D2E664000B0C45D /* Launch Screen.storyboard */; };
+		E6836CC61D2D0600006F4AC8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E6836CC51D2D0600006F4AC8 /* main.m */; };
+		E6836CC91D2D0600006F4AC8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E6836CC81D2D0600006F4AC8 /* AppDelegate.m */; };
+		E6836CCC1D2D0600006F4AC8 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6836CCB1D2D0600006F4AC8 /* WelcomeViewController.m */; };
+		E6836CCF1D2D0600006F4AC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6836CCD1D2D0600006F4AC8 /* Main.storyboard */; };
+		E6836CD11D2D0600006F4AC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6836CD01D2D0600006F4AC8 /* Assets.xcassets */; };
+		E6836CDF1D2D0600006F4AC8 /* SteerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6836CDE1D2D0600006F4AC8 /* SteerTests.m */; };
+		E6836CEA1D2D0600006F4AC8 /* SteerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6836CE91D2D0600006F4AC8 /* SteerUITests.m */; };
+		E6836D081D2D18B2006F4AC8 /* ProximaNova-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = E6836CF81D2D18B2006F4AC8 /* ProximaNova-Black.otf */; };
+		E6836D091D2D18B2006F4AC8 /* ProximaNova-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E6836CF91D2D18B2006F4AC8 /* ProximaNova-Bold.otf */; };
+		E6836D0A1D2D18B2006F4AC8 /* ProximaNova-BoldIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = E6836CFA1D2D18B2006F4AC8 /* ProximaNova-BoldIt.otf */; };
+		E6836D0B1D2D18B2006F4AC8 /* ProximaNova-Extrabold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E6836CFB1D2D18B2006F4AC8 /* ProximaNova-Extrabold.otf */; };
+		E6836D0C1D2D18B2006F4AC8 /* ProximaNova-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = E6836CFC1D2D18B2006F4AC8 /* ProximaNova-Light.otf */; };
+		E6836D0D1D2D18B2006F4AC8 /* ProximaNova-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = E6836CFD1D2D18B2006F4AC8 /* ProximaNova-LightItalic.otf */; };
+		E6836D0E1D2D18B2006F4AC8 /* ProximaNova-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = E6836CFE1D2D18B2006F4AC8 /* ProximaNova-Regular.otf */; };
+		E6836D0F1D2D18B2006F4AC8 /* ProximaNova-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = E6836CFF1D2D18B2006F4AC8 /* ProximaNova-RegularItalic.otf */; };
+		E6836D101D2D18B2006F4AC8 /* ProximaNova-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E6836D001D2D18B2006F4AC8 /* ProximaNova-Semibold.otf */; };
+		E6836D111D2D18B2006F4AC8 /* ProximaNova-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = E6836D011D2D18B2006F4AC8 /* ProximaNova-SemiboldItalic.otf */; };
+		E6836D121D2D18B2006F4AC8 /* ProximaNovaCond-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = E6836D021D2D18B2006F4AC8 /* ProximaNovaCond-Light.otf */; };
+		E6836D131D2D18B2006F4AC8 /* ProximaNovaCond-LightIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = E6836D031D2D18B2006F4AC8 /* ProximaNovaCond-LightIt.otf */; };
+		E6836D141D2D18B2006F4AC8 /* ProximaNovaCond-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = E6836D041D2D18B2006F4AC8 /* ProximaNovaCond-Regular.otf */; };
+		E6836D151D2D18B2006F4AC8 /* ProximaNovaCond-RegularIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = E6836D051D2D18B2006F4AC8 /* ProximaNovaCond-RegularIt.otf */; };
+		E6836D161D2D18B2006F4AC8 /* ProximaNovaCond-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E6836D061D2D18B2006F4AC8 /* ProximaNovaCond-Semibold.otf */; };
+		E6836D171D2D18B2006F4AC8 /* ProximaNovaCond-SemiboldIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = E6836D071D2D18B2006F4AC8 /* ProximaNovaCond-SemiboldIt.otf */; };
+		E6836D1A1D2D1B21006F4AC8 /* ZonesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6836D191D2D1B21006F4AC8 /* ZonesListViewController.m */; };
+		E6BDEEB21D365051005E6318 /* LeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6BDEEB11D365051005E6318 /* LeftMenuViewController.m */; };
+		E6BDEEB51D36508C005E6318 /* MenuRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6BDEEB41D36508C005E6318 /* MenuRootViewController.m */; };
+		E6BDEEB81D3654C6005E6318 /* CreditsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6BDEEB71D3654C6005E6318 /* CreditsViewController.m */; };
+		E6EAB2081D2FF2B500A7D9FA /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EAB2071D2FF2B500A7D9FA /* NavigationViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E6836CDB1D2D0600006F4AC8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6836CB91D2D0600006F4AC8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E6836CC01D2D0600006F4AC8;
+			remoteInfo = Steer;
+		};
+		E6836CE61D2D0600006F4AC8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6836CB91D2D0600006F4AC8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E6836CC01D2D0600006F4AC8;
+			remoteInfo = Steer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1085E8E7EAEDB064B48A0DED /* libPods-Steer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Steer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C94029E22A6601D5A26B49F /* Pods-Steer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Steer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Steer/Pods-Steer.debug.xcconfig"; sourceTree = "<group>"; };
+		92CAD069428E4DBCFCD89F2F /* Pods-Steer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Steer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Steer/Pods-Steer.release.xcconfig"; sourceTree = "<group>"; };
+		E6124D351D2E664000B0C45D /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		E638A9121D314935007CE7FD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		E6836CC11D2D0600006F4AC8 /* Steer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Steer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6836CC51D2D0600006F4AC8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E6836CC71D2D0600006F4AC8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E6836CC81D2D0600006F4AC8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E6836CCA1D2D0600006F4AC8 /* WelcomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
+		E6836CCB1D2D0600006F4AC8 /* WelcomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
+		E6836CCE1D2D0600006F4AC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E6836CD01D2D0600006F4AC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E6836CD51D2D0600006F4AC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6836CDA1D2D0600006F4AC8 /* SteerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SteerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6836CDE1D2D0600006F4AC8 /* SteerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SteerTests.m; sourceTree = "<group>"; };
+		E6836CE01D2D0600006F4AC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6836CE51D2D0600006F4AC8 /* SteerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SteerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6836CE91D2D0600006F4AC8 /* SteerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SteerUITests.m; sourceTree = "<group>"; };
+		E6836CEB1D2D0600006F4AC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6836CF81D2D18B2006F4AC8 /* ProximaNova-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Black.otf"; sourceTree = "<group>"; };
+		E6836CF91D2D18B2006F4AC8 /* ProximaNova-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Bold.otf"; sourceTree = "<group>"; };
+		E6836CFA1D2D18B2006F4AC8 /* ProximaNova-BoldIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-BoldIt.otf"; sourceTree = "<group>"; };
+		E6836CFB1D2D18B2006F4AC8 /* ProximaNova-Extrabold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Extrabold.otf"; sourceTree = "<group>"; };
+		E6836CFC1D2D18B2006F4AC8 /* ProximaNova-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Light.otf"; sourceTree = "<group>"; };
+		E6836CFD1D2D18B2006F4AC8 /* ProximaNova-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-LightItalic.otf"; sourceTree = "<group>"; };
+		E6836CFE1D2D18B2006F4AC8 /* ProximaNova-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Regular.otf"; sourceTree = "<group>"; };
+		E6836CFF1D2D18B2006F4AC8 /* ProximaNova-RegularItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-RegularItalic.otf"; sourceTree = "<group>"; };
+		E6836D001D2D18B2006F4AC8 /* ProximaNova-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Semibold.otf"; sourceTree = "<group>"; };
+		E6836D011D2D18B2006F4AC8 /* ProximaNova-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-SemiboldItalic.otf"; sourceTree = "<group>"; };
+		E6836D021D2D18B2006F4AC8 /* ProximaNovaCond-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNovaCond-Light.otf"; sourceTree = "<group>"; };
+		E6836D031D2D18B2006F4AC8 /* ProximaNovaCond-LightIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNovaCond-LightIt.otf"; sourceTree = "<group>"; };
+		E6836D041D2D18B2006F4AC8 /* ProximaNovaCond-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNovaCond-Regular.otf"; sourceTree = "<group>"; };
+		E6836D051D2D18B2006F4AC8 /* ProximaNovaCond-RegularIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNovaCond-RegularIt.otf"; sourceTree = "<group>"; };
+		E6836D061D2D18B2006F4AC8 /* ProximaNovaCond-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNovaCond-Semibold.otf"; sourceTree = "<group>"; };
+		E6836D071D2D18B2006F4AC8 /* ProximaNovaCond-SemiboldIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNovaCond-SemiboldIt.otf"; sourceTree = "<group>"; };
+		E6836D181D2D1B21006F4AC8 /* ZonesListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZonesListViewController.h; sourceTree = "<group>"; };
+		E6836D191D2D1B21006F4AC8 /* ZonesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZonesListViewController.m; sourceTree = "<group>"; };
+		E6BDEEB01D365051005E6318 /* LeftMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftMenuViewController.h; sourceTree = "<group>"; };
+		E6BDEEB11D365051005E6318 /* LeftMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftMenuViewController.m; sourceTree = "<group>"; };
+		E6BDEEB31D36508C005E6318 /* MenuRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuRootViewController.h; sourceTree = "<group>"; };
+		E6BDEEB41D36508C005E6318 /* MenuRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuRootViewController.m; sourceTree = "<group>"; };
+		E6BDEEB61D3654C6005E6318 /* CreditsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreditsViewController.h; sourceTree = "<group>"; };
+		E6BDEEB71D3654C6005E6318 /* CreditsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditsViewController.m; sourceTree = "<group>"; };
+		E6EAB2061D2FF2B500A7D9FA /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
+		E6EAB2071D2FF2B500A7D9FA /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E6836CBE1D2D0600006F4AC8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E893660B7BAE4054205D927 /* libPods-Steer.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6836CD71D2D0600006F4AC8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6836CE21D2D0600006F4AC8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6DC7FE81C4E8AB6054D57F21 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7C94029E22A6601D5A26B49F /* Pods-Steer.debug.xcconfig */,
+				92CAD069428E4DBCFCD89F2F /* Pods-Steer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E36972F46AD24BF5C49BA4E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E638A9121D314935007CE7FD /* CoreLocation.framework */,
+				1085E8E7EAEDB064B48A0DED /* libPods-Steer.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E6836CB81D2D0600006F4AC8 = {
+			isa = PBXGroup;
+			children = (
+				E6836CC31D2D0600006F4AC8 /* Steer */,
+				E6836CDD1D2D0600006F4AC8 /* SteerTests */,
+				E6836CE81D2D0600006F4AC8 /* SteerUITests */,
+				E6836CC21D2D0600006F4AC8 /* Products */,
+				6DC7FE81C4E8AB6054D57F21 /* Pods */,
+				E36972F46AD24BF5C49BA4E0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E6836CC21D2D0600006F4AC8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E6836CC11D2D0600006F4AC8 /* Steer.app */,
+				E6836CDA1D2D0600006F4AC8 /* SteerTests.xctest */,
+				E6836CE51D2D0600006F4AC8 /* SteerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E6836CC31D2D0600006F4AC8 /* Steer */ = {
+			isa = PBXGroup;
+			children = (
+				E6836CC71D2D0600006F4AC8 /* AppDelegate.h */,
+				E6836CC81D2D0600006F4AC8 /* AppDelegate.m */,
+				E6836CCA1D2D0600006F4AC8 /* WelcomeViewController.h */,
+				E6836CCB1D2D0600006F4AC8 /* WelcomeViewController.m */,
+				E6BDEEB31D36508C005E6318 /* MenuRootViewController.h */,
+				E6BDEEB41D36508C005E6318 /* MenuRootViewController.m */,
+				E6BDEEB01D365051005E6318 /* LeftMenuViewController.h */,
+				E6BDEEB11D365051005E6318 /* LeftMenuViewController.m */,
+				E6836D181D2D1B21006F4AC8 /* ZonesListViewController.h */,
+				E6836D191D2D1B21006F4AC8 /* ZonesListViewController.m */,
+				E6BDEEB61D3654C6005E6318 /* CreditsViewController.h */,
+				E6BDEEB71D3654C6005E6318 /* CreditsViewController.m */,
+				E6EAB2061D2FF2B500A7D9FA /* NavigationViewController.h */,
+				E6EAB2071D2FF2B500A7D9FA /* NavigationViewController.m */,
+				E6124D351D2E664000B0C45D /* Launch Screen.storyboard */,
+				E6836CCD1D2D0600006F4AC8 /* Main.storyboard */,
+				E6836CD01D2D0600006F4AC8 /* Assets.xcassets */,
+				E6836CD51D2D0600006F4AC8 /* Info.plist */,
+				E6836CF71D2D18A1006F4AC8 /* Fonts */,
+				E6836CC41D2D0600006F4AC8 /* Supporting Files */,
+			);
+			path = Steer;
+			sourceTree = "<group>";
+		};
+		E6836CC41D2D0600006F4AC8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E6836CC51D2D0600006F4AC8 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E6836CDD1D2D0600006F4AC8 /* SteerTests */ = {
+			isa = PBXGroup;
+			children = (
+				E6836CDE1D2D0600006F4AC8 /* SteerTests.m */,
+				E6836CE01D2D0600006F4AC8 /* Info.plist */,
+			);
+			path = SteerTests;
+			sourceTree = "<group>";
+		};
+		E6836CE81D2D0600006F4AC8 /* SteerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E6836CE91D2D0600006F4AC8 /* SteerUITests.m */,
+				E6836CEB1D2D0600006F4AC8 /* Info.plist */,
+			);
+			path = SteerUITests;
+			sourceTree = "<group>";
+		};
+		E6836CF71D2D18A1006F4AC8 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E6836CF81D2D18B2006F4AC8 /* ProximaNova-Black.otf */,
+				E6836CF91D2D18B2006F4AC8 /* ProximaNova-Bold.otf */,
+				E6836CFA1D2D18B2006F4AC8 /* ProximaNova-BoldIt.otf */,
+				E6836CFB1D2D18B2006F4AC8 /* ProximaNova-Extrabold.otf */,
+				E6836CFC1D2D18B2006F4AC8 /* ProximaNova-Light.otf */,
+				E6836CFD1D2D18B2006F4AC8 /* ProximaNova-LightItalic.otf */,
+				E6836CFE1D2D18B2006F4AC8 /* ProximaNova-Regular.otf */,
+				E6836CFF1D2D18B2006F4AC8 /* ProximaNova-RegularItalic.otf */,
+				E6836D001D2D18B2006F4AC8 /* ProximaNova-Semibold.otf */,
+				E6836D011D2D18B2006F4AC8 /* ProximaNova-SemiboldItalic.otf */,
+				E6836D021D2D18B2006F4AC8 /* ProximaNovaCond-Light.otf */,
+				E6836D031D2D18B2006F4AC8 /* ProximaNovaCond-LightIt.otf */,
+				E6836D041D2D18B2006F4AC8 /* ProximaNovaCond-Regular.otf */,
+				E6836D051D2D18B2006F4AC8 /* ProximaNovaCond-RegularIt.otf */,
+				E6836D061D2D18B2006F4AC8 /* ProximaNovaCond-Semibold.otf */,
+				E6836D071D2D18B2006F4AC8 /* ProximaNovaCond-SemiboldIt.otf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E6836CC01D2D0600006F4AC8 /* Steer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6836CEE1D2D0600006F4AC8 /* Build configuration list for PBXNativeTarget "Steer" */;
+			buildPhases = (
+				923C705B3521B74CE0A8F31F /* Check Pods Manifest.lock */,
+				E6836CBD1D2D0600006F4AC8 /* Sources */,
+				E6836CBE1D2D0600006F4AC8 /* Frameworks */,
+				E6836CBF1D2D0600006F4AC8 /* Resources */,
+				E89EAF1B35BA4D48A9FB8842 /* Embed Pods Frameworks */,
+				88AF1AECD723CA236CF427E3 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Steer;
+			productName = Steer;
+			productReference = E6836CC11D2D0600006F4AC8 /* Steer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E6836CD91D2D0600006F4AC8 /* SteerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6836CF11D2D0600006F4AC8 /* Build configuration list for PBXNativeTarget "SteerTests" */;
+			buildPhases = (
+				E6836CD61D2D0600006F4AC8 /* Sources */,
+				E6836CD71D2D0600006F4AC8 /* Frameworks */,
+				E6836CD81D2D0600006F4AC8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E6836CDC1D2D0600006F4AC8 /* PBXTargetDependency */,
+			);
+			name = SteerTests;
+			productName = SteerTests;
+			productReference = E6836CDA1D2D0600006F4AC8 /* SteerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E6836CE41D2D0600006F4AC8 /* SteerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6836CF41D2D0600006F4AC8 /* Build configuration list for PBXNativeTarget "SteerUITests" */;
+			buildPhases = (
+				E6836CE11D2D0600006F4AC8 /* Sources */,
+				E6836CE21D2D0600006F4AC8 /* Frameworks */,
+				E6836CE31D2D0600006F4AC8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E6836CE71D2D0600006F4AC8 /* PBXTargetDependency */,
+			);
+			name = SteerUITests;
+			productName = SteerUITests;
+			productReference = E6836CE51D2D0600006F4AC8 /* SteerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E6836CB91D2D0600006F4AC8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Enterpi iOS";
+				TargetAttributes = {
+					E6836CC01D2D0600006F4AC8 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 4E74VFZH3J;
+					};
+					E6836CD91D2D0600006F4AC8 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = E6836CC01D2D0600006F4AC8;
+					};
+					E6836CE41D2D0600006F4AC8 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = E6836CC01D2D0600006F4AC8;
+					};
+				};
+			};
+			buildConfigurationList = E6836CBC1D2D0600006F4AC8 /* Build configuration list for PBXProject "Steer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E6836CB81D2D0600006F4AC8;
+			productRefGroup = E6836CC21D2D0600006F4AC8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E6836CC01D2D0600006F4AC8 /* Steer */,
+				E6836CD91D2D0600006F4AC8 /* SteerTests */,
+				E6836CE41D2D0600006F4AC8 /* SteerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E6836CBF1D2D0600006F4AC8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6836D0E1D2D18B2006F4AC8 /* ProximaNova-Regular.otf in Resources */,
+				E6836CD11D2D0600006F4AC8 /* Assets.xcassets in Resources */,
+				E6836D0F1D2D18B2006F4AC8 /* ProximaNova-RegularItalic.otf in Resources */,
+				E6836D111D2D18B2006F4AC8 /* ProximaNova-SemiboldItalic.otf in Resources */,
+				E6836D121D2D18B2006F4AC8 /* ProximaNovaCond-Light.otf in Resources */,
+				E6836D0D1D2D18B2006F4AC8 /* ProximaNova-LightItalic.otf in Resources */,
+				E6836D131D2D18B2006F4AC8 /* ProximaNovaCond-LightIt.otf in Resources */,
+				E6836D0A1D2D18B2006F4AC8 /* ProximaNova-BoldIt.otf in Resources */,
+				E6124D361D2E664000B0C45D /* Launch Screen.storyboard in Resources */,
+				E6836D151D2D18B2006F4AC8 /* ProximaNovaCond-RegularIt.otf in Resources */,
+				E6836D171D2D18B2006F4AC8 /* ProximaNovaCond-SemiboldIt.otf in Resources */,
+				E6836D141D2D18B2006F4AC8 /* ProximaNovaCond-Regular.otf in Resources */,
+				E6836D161D2D18B2006F4AC8 /* ProximaNovaCond-Semibold.otf in Resources */,
+				E6836D081D2D18B2006F4AC8 /* ProximaNova-Black.otf in Resources */,
+				E6836D101D2D18B2006F4AC8 /* ProximaNova-Semibold.otf in Resources */,
+				E6836D0B1D2D18B2006F4AC8 /* ProximaNova-Extrabold.otf in Resources */,
+				E6836D0C1D2D18B2006F4AC8 /* ProximaNova-Light.otf in Resources */,
+				E6836CCF1D2D0600006F4AC8 /* Main.storyboard in Resources */,
+				E6836D091D2D18B2006F4AC8 /* ProximaNova-Bold.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6836CD81D2D0600006F4AC8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6836CE31D2D0600006F4AC8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		88AF1AECD723CA236CF427E3 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Steer/Pods-Steer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		923C705B3521B74CE0A8F31F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E89EAF1B35BA4D48A9FB8842 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Steer/Pods-Steer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E6836CBD1D2D0600006F4AC8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6836CCC1D2D0600006F4AC8 /* WelcomeViewController.m in Sources */,
+				E6BDEEB51D36508C005E6318 /* MenuRootViewController.m in Sources */,
+				E6836CC91D2D0600006F4AC8 /* AppDelegate.m in Sources */,
+				E6EAB2081D2FF2B500A7D9FA /* NavigationViewController.m in Sources */,
+				E6836D1A1D2D1B21006F4AC8 /* ZonesListViewController.m in Sources */,
+				E6BDEEB21D365051005E6318 /* LeftMenuViewController.m in Sources */,
+				E6836CC61D2D0600006F4AC8 /* main.m in Sources */,
+				E6BDEEB81D3654C6005E6318 /* CreditsViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6836CD61D2D0600006F4AC8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6836CDF1D2D0600006F4AC8 /* SteerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6836CE11D2D0600006F4AC8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6836CEA1D2D0600006F4AC8 /* SteerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E6836CDC1D2D0600006F4AC8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E6836CC01D2D0600006F4AC8 /* Steer */;
+			targetProxy = E6836CDB1D2D0600006F4AC8 /* PBXContainerItemProxy */;
+		};
+		E6836CE71D2D0600006F4AC8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E6836CC01D2D0600006F4AC8 /* Steer */;
+			targetProxy = E6836CE61D2D0600006F4AC8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E6836CCD1D2D0600006F4AC8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E6836CCE1D2D0600006F4AC8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E6836CEC1D2D0600006F4AC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E6836CED1D2D0600006F4AC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E6836CEF1D2D0600006F4AC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C94029E22A6601D5A26B49F /* Pods-Steer.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Pranav Pankaj Shah (XPVRG24CM3)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Pranav Pankaj Shah (XPVRG24CM3)";
+				INFOPLIST_FILE = Steer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.enterpi.Steer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3bfa658c-fbce-47ad-b9f7-a753eb2ea00b";
+			};
+			name = Debug;
+		};
+		E6836CF01D2D0600006F4AC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92CAD069428E4DBCFCD89F2F /* Pods-Steer.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: EnterPI Software Solutions Private Limited";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: EnterPI Software Solutions Private Limited";
+				INFOPLIST_FILE = Steer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.enterpi.Steer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "17a8d07f-8d7a-44a9-a009-31472275eb36";
+			};
+			name = Release;
+		};
+		E6836CF21D2D0600006F4AC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SteerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.enterpi.SteerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Steer.app/Steer";
+			};
+			name = Debug;
+		};
+		E6836CF31D2D0600006F4AC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SteerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.enterpi.SteerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Steer.app/Steer";
+			};
+			name = Release;
+		};
+		E6836CF51D2D0600006F4AC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SteerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.enterpi.SteerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Steer;
+			};
+			name = Debug;
+		};
+		E6836CF61D2D0600006F4AC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SteerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.enterpi.SteerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Steer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E6836CBC1D2D0600006F4AC8 /* Build configuration list for PBXProject "Steer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6836CEC1D2D0600006F4AC8 /* Debug */,
+				E6836CED1D2D0600006F4AC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6836CEE1D2D0600006F4AC8 /* Build configuration list for PBXNativeTarget "Steer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6836CEF1D2D0600006F4AC8 /* Debug */,
+				E6836CF01D2D0600006F4AC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6836CF11D2D0600006F4AC8 /* Build configuration list for PBXNativeTarget "SteerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6836CF21D2D0600006F4AC8 /* Debug */,
+				E6836CF31D2D0600006F4AC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6836CF41D2D0600006F4AC8 /* Build configuration list for PBXNativeTarget "SteerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6836CF51D2D0600006F4AC8 /* Debug */,
+				E6836CF61D2D0600006F4AC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E6836CB91D2D0600006F4AC8 /* Project object */;
+}

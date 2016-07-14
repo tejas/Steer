@@ -1,0 +1,16 @@
+PODS:
+  - IndoorsSDK-iOS (4.1.0)
+  - PulsingHalo (0.1.0)
+  - RESideMenu (4.0.7)
+
+DEPENDENCIES:
+  - IndoorsSDK-iOS
+  - PulsingHalo
+  - RESideMenu (~> 4.0.7)
+
+SPEC CHECKSUMS:
+  IndoorsSDK-iOS: d6d600d11397e3167da1d9b80a414df03c2392b6
+  PulsingHalo: d2684152281a3f7398b9554734b9a4f8feb9129a
+  RESideMenu: f24c508404b49c667344c54aba7e590883533958
+
+COCOAPODS: 0.39.0

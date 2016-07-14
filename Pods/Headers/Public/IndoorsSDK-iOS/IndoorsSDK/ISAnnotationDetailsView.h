@@ -1,0 +1,1 @@
+../../../../IndoorsSDK-iOS/IndoorsSDK.framework/Headers/ISAnnotationDetailsView.h
