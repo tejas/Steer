@@ -9,6 +9,7 @@
 #import "MenuRootViewController.h"
 
 @interface MenuRootViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *blurImageView;
 
 @end
 
@@ -23,15 +24,17 @@
     self.contentViewShadowOpacity = 0.6;
     self.contentViewShadowRadius = 12;
     self.contentViewShadowEnabled = YES;
-    
-    self.contentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ZonesListNavigationController"];
+    self.zonesListViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ZonesListNavigationController"];
+
+    self.contentViewController = self.zonesListViewController;
     self.leftMenuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"LeftMenuViewController"];
     self.delegate = self;
     
     self.view.backgroundColor = [UIColor clearColor];
-    UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
-    UIVisualEffectView *blurEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
-    [self.view addSubview:blurEffectView];
+//    UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+//    UIVisualEffectView *blurEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+//    blurEffectView.frame = self.view.frame;
+//    [self.blurImageView addSubview:blurEffectView];
 }
 
 - (void)viewDidLoad {
@@ -39,10 +42,10 @@
     // Do any additional setup after loading the view.
 }
 
-- (void)viewWillAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated
+{
     self.navigationController.navigationBarHidden = YES;
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

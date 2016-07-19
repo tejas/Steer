@@ -17,9 +17,15 @@
             <string>ProximaNova-Regular</string>
             <string>ProximaNova-Regular</string>
             <string>ProximaNova-Regular</string>
+            <string>ProximaNova-Regular</string>
+            <string>ProximaNova-Regular</string>
+            <string>ProximaNova-Regular</string>
+            <string>ProximaNova-Regular</string>
+            <string>ProximaNova-Regular</string>
+            <string>ProximaNova-Regular</string>
+            <string>ProximaNova-Regular</string>
         </mutableArray>
         <mutableArray key="ProximaNova-Semibold.otf">
-            <string>ProximaNova-Semibold</string>
             <string>ProximaNova-Semibold</string>
             <string>ProximaNova-Semibold</string>
             <string>ProximaNova-Semibold</string>
@@ -136,27 +142,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s4U-z0-AJd">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RootBlurImage" translatesAutoresizingMaskIntoConstraints="NO" id="xCt-rg-stG">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="irO-Ph-Jjj">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <color key="backgroundColor" red="0.20784313730000001" green="0.3803921569" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="tintColor" red="0.20784313730000001" green="0.3803921569" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
-                                </view>
-                                <color key="backgroundColor" red="0.20784313730000001" green="0.3803921569" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="0.20784313730000001" green="0.3803921569" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <blurEffect style="light"/>
-                            </visualEffectView>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.20784313730000001" green="0.3803921569" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="s4U-z0-AJd" firstAttribute="leading" secondItem="bKA-MR-BXn" secondAttribute="leading" id="5mt-0B-IG8"/>
-                            <constraint firstItem="s4U-z0-AJd" firstAttribute="top" secondItem="ynd-sm-GYD" secondAttribute="bottom" constant="-20" id="S3O-6a-cVd"/>
-                            <constraint firstAttribute="trailing" secondItem="s4U-z0-AJd" secondAttribute="trailing" id="dIq-9J-j7b"/>
-                            <constraint firstItem="9Nu-Dq-488" firstAttribute="top" secondItem="s4U-z0-AJd" secondAttribute="bottom" id="zDR-IP-hio"/>
+                            <constraint firstItem="xCt-rg-stG" firstAttribute="top" secondItem="bKA-MR-BXn" secondAttribute="top" id="Ad6-P5-TKd"/>
+                            <constraint firstAttribute="trailing" secondItem="xCt-rg-stG" secondAttribute="trailing" id="bav-4b-LEh"/>
+                            <constraint firstItem="9Nu-Dq-488" firstAttribute="top" secondItem="xCt-rg-stG" secondAttribute="bottom" id="fQp-G4-7zO"/>
+                            <constraint firstItem="xCt-rg-stG" firstAttribute="leading" secondItem="bKA-MR-BXn" secondAttribute="leading" id="xHW-85-y7B"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="blurImageView" destination="xCt-rg-stG" id="u5X-4f-TOC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fhQ-cG-eBb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -284,12 +284,17 @@
                     </view>
                     <navigationItem key="navigationItem" id="e82-Qw-k6r">
                         <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" image="MenuIcon" id="jvP-o3-Big">
+                            <connections>
+                                <action selector="presentLeftMenuViewController:" destination="zXR-ip-1X1" id="OcI-Ss-k8x"/>
+                            </connections>
+                        </barButtonItem>
                         <view key="titleView" contentMode="scaleToFill" id="e9h-nL-Oyz">
-                            <rect key="frame" x="20" y="6" width="560" height="33"/>
+                            <rect key="frame" x="62" y="6" width="476" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CURRENT LOCATION" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBy-QB-6qa">
-                                    <rect key="frame" x="0.0" y="0.0" width="560" height="33"/>
+                                    <rect key="frame" x="20" y="0.0" width="436" height="33"/>
                                     <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="18"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
@@ -297,10 +302,10 @@
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstItem="NBy-QB-6qa" firstAttribute="leading" secondItem="e9h-nL-Oyz" secondAttribute="leading" id="KZn-Dh-KFU"/>
-                                <constraint firstAttribute="bottom" secondItem="NBy-QB-6qa" secondAttribute="bottom" id="avQ-4L-djD"/>
-                                <constraint firstItem="NBy-QB-6qa" firstAttribute="top" secondItem="e9h-nL-Oyz" secondAttribute="top" id="fTP-dS-ZKz"/>
-                                <constraint firstAttribute="trailing" secondItem="NBy-QB-6qa" secondAttribute="trailing" id="yfd-i7-r5s"/>
+                                <constraint firstAttribute="trailing" secondItem="NBy-QB-6qa" secondAttribute="trailing" constant="20" id="30B-nZ-dlc"/>
+                                <constraint firstItem="NBy-QB-6qa" firstAttribute="leading" secondItem="e9h-nL-Oyz" secondAttribute="leading" constant="20" id="93U-Qy-JXD"/>
+                                <constraint firstItem="NBy-QB-6qa" firstAttribute="top" secondItem="e9h-nL-Oyz" secondAttribute="top" id="sfp-cA-nAC"/>
+                                <constraint firstAttribute="bottom" secondItem="NBy-QB-6qa" secondAttribute="bottom" id="vpK-YL-MXu"/>
                             </constraints>
                         </view>
                     </navigationItem>
@@ -321,7 +326,7 @@
         <!--Credits View Controller-->
         <scene sceneID="uWN-wB-VfA">
             <objects>
-                <viewController storyboardIdentifier="CreditsViewController" id="CkK-WQ-2kP" customClass="CreditsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreditsViewController" automaticallyAdjustsScrollViewInsets="NO" id="CkK-WQ-2kP" customClass="CreditsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="z89-uJ-Rs1"/>
                         <viewControllerLayoutGuide type="bottom" id="oIq-0z-deu"/>
@@ -329,16 +334,143 @@
                     <view key="view" contentMode="scaleToFill" id="3ah-9f-P8g">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="RDL-Mx-yXM">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="FrS-wI-AtB">
+                                <rect key="frame" x="20" y="92" width="560" height="480"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hZm-1v-Lh6">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="122"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo_Color" translatesAutoresizingMaskIntoConstraints="NO" id="2OI-Ct-i1R">
+                                                <rect key="frame" x="230" y="0.0" width="100" height="92"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="5vT-uC-oHT"/>
+                                                    <constraint firstAttribute="width" secondItem="2OI-Ct-i1R" secondAttribute="height" multiplier="51:47" id="dbb-Zo-TxF"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 1.0" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myx-XR-O0v">
+                                                <rect key="frame" x="238" y="102" width="85" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="NYq-YL-WTr"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="18"/>
+                                                <color key="textColor" red="0.20784313730000001" green="0.3803921569" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="0Zw-Lp-klB">
+                                        <rect key="frame" x="0.0" y="188" width="560" height="113"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Designed &amp; Developed" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4b-xQ-pZW">
+                                                <rect key="frame" x="158" y="0.0" width="245" height="24"/>
+                                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="24"/>
+                                                <color key="textColor" red="0.20784313730000001" green="0.3803921569" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Xhp-1g-XgU">
+                                                <rect key="frame" x="229" y="40" width="102" height="24"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="with" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nuK-CQ-Y4F">
+                                                        <rect key="frame" x="0.0" y="0.0" width="44" height="24"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="44" id="vNq-iv-8XC"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="24"/>
+                                                        <color key="textColor" red="0.20784313730000001" green="0.3803921569" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TY4-u0-Qff" customClass="SparkButton" customModule="Steer" customModuleProvider="target">
+                                                        <rect key="frame" x="52" y="2" width="20" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="20" id="E6b-Sk-8pK"/>
+                                                            <constraint firstAttribute="height" constant="20" id="thv-P5-h0u"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <state key="normal" backgroundImage="F23D8F9C-C108-4B65-A4A7-EAE31ED6E177"/>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="at" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxz-hP-Fid">
+                                                        <rect key="frame" x="80" y="0.0" width="22" height="24"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="22" id="cPF-hy-NxD"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="24"/>
+                                                        <color key="textColor" red="0.20784313730000001" green="0.3803921569" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AfY-Jg-DHs">
+                                                <rect key="frame" x="230" y="80" width="101" height="33"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="33" id="xm3-77-oZ0"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="EnterpiLogo"/>
+                                                <connections>
+                                                    <action selector="goToEnterpiWebsite:" destination="CkK-WQ-2kP" eventType="touchUpInside" id="V5G-4l-QyH"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Q0s-Oz-fdL">
+                                        <rect key="frame" x="0.0" y="366" width="560" height="114"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© 1998 - 2016 Enterpi Software Solutions. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rR5-ir-XUZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="560" height="57"/>
+                                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="18"/>
+                                                <color key="textColor" red="0.20784313730000001" green="0.3803921569" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All rights reserved" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOK-LK-dNC">
+                                                <rect key="frame" x="0.0" y="57" width="560" height="57"/>
+                                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="18"/>
+                                                <color key="textColor" red="0.20784313730000001" green="0.3803921569" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="114" id="3b1-fm-ptF"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="480" id="adJ-Jl-W6o"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="RDL-Mx-yXM" secondAttribute="trailing" id="3R5-Eb-KMn"/>
+                            <constraint firstAttribute="trailing" secondItem="RDL-Mx-yXM" secondAttribute="trailing" id="5sA-Bg-62b"/>
+                            <constraint firstItem="RDL-Mx-yXM" firstAttribute="top" secondItem="z89-uJ-Rs1" secondAttribute="bottom" id="6U2-y5-7uZ"/>
+                            <constraint firstItem="RDL-Mx-yXM" firstAttribute="leading" secondItem="3ah-9f-P8g" secondAttribute="leading" id="7Fr-Cu-xuk"/>
+                            <constraint firstAttribute="trailing" secondItem="FrS-wI-AtB" secondAttribute="trailing" constant="20" id="OhY-W2-cKK"/>
+                            <constraint firstItem="FrS-wI-AtB" firstAttribute="leading" secondItem="3ah-9f-P8g" secondAttribute="leading" constant="20" id="SMb-Ky-Jb7"/>
+                            <constraint firstItem="RDL-Mx-yXM" firstAttribute="leading" secondItem="3ah-9f-P8g" secondAttribute="leading" id="UCo-E2-QjG"/>
+                            <constraint firstItem="oIq-0z-deu" firstAttribute="top" secondItem="RDL-Mx-yXM" secondAttribute="bottom" id="ekl-Lr-3Tq"/>
+                            <constraint firstItem="oIq-0z-deu" firstAttribute="top" secondItem="RDL-Mx-yXM" secondAttribute="bottom" id="h6o-ST-gyq"/>
+                            <constraint firstItem="RDL-Mx-yXM" firstAttribute="top" secondItem="z89-uJ-Rs1" secondAttribute="bottom" id="jgM-CE-Rie"/>
+                            <constraint firstItem="FrS-wI-AtB" firstAttribute="centerX" secondItem="RDL-Mx-yXM" secondAttribute="centerX" id="pBm-Kh-xhY"/>
+                            <constraint firstItem="FrS-wI-AtB" firstAttribute="centerY" secondItem="RDL-Mx-yXM" secondAttribute="centerY" id="qJe-DR-JHb"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="TMl-bl-1fK">
+                    <navigationItem key="navigationItem" id="sFE-de-CTq">
                         <nil key="title"/>
-                        <view key="titleView" contentMode="scaleToFill" id="gFu-fD-0bU">
-                            <rect key="frame" x="113" y="6" width="374" height="33"/>
+                        <barButtonItem key="leftBarButtonItem" image="MenuIcon" id="mMi-4d-TiV">
+                            <connections>
+                                <action selector="presentLeftMenuViewController:" destination="CkK-WQ-2kP" id="Bv2-Ln-4fg"/>
+                            </connections>
+                        </barButtonItem>
+                        <view key="titleView" contentMode="scaleToFill" id="a6P-Va-ojV">
+                            <rect key="frame" x="62" y="6" width="476" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CREDITS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aly-5M-4TZ">
-                                    <rect key="frame" x="0.0" y="0.0" width="374" height="33"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CREDITS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ef-gL-QDo">
+                                    <rect key="frame" x="20" y="0.0" width="436" height="33"/>
                                     <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="18"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
@@ -346,13 +478,16 @@
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstItem="Aly-5M-4TZ" firstAttribute="top" secondItem="gFu-fD-0bU" secondAttribute="top" id="5o8-bo-GLI"/>
-                                <constraint firstAttribute="trailing" secondItem="Aly-5M-4TZ" secondAttribute="trailing" id="FNC-mE-rWC"/>
-                                <constraint firstAttribute="bottom" secondItem="Aly-5M-4TZ" secondAttribute="bottom" id="HU3-7J-jps"/>
-                                <constraint firstItem="Aly-5M-4TZ" firstAttribute="leading" secondItem="gFu-fD-0bU" secondAttribute="leading" id="T34-5s-IKT"/>
+                                <constraint firstAttribute="bottom" secondItem="3ef-gL-QDo" secondAttribute="bottom" id="hsu-hV-wS9"/>
+                                <constraint firstAttribute="trailing" secondItem="3ef-gL-QDo" secondAttribute="trailing" constant="20" id="ors-3M-d4h"/>
+                                <constraint firstItem="3ef-gL-QDo" firstAttribute="top" secondItem="a6P-Va-ojV" secondAttribute="top" id="usg-H3-ErH"/>
+                                <constraint firstItem="3ef-gL-QDo" firstAttribute="leading" secondItem="a6P-Va-ojV" secondAttribute="leading" constant="20" id="vNU-mK-tVK"/>
                             </constraints>
                         </view>
                     </navigationItem>
+                    <connections>
+                        <outlet property="likeButton" destination="TY4-u0-Qff" id="CJf-An-yof"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eXu-ij-6VC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -366,35 +501,37 @@
                         <viewControllerLayoutGuide type="top" id="omV-VK-rVj"/>
                         <viewControllerLayoutGuide type="bottom" id="5ZP-bs-qGH"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="pd3-tI-6gH">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="pd3-tI-6gH">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6k4-GI-HeF">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6k4-GI-HeF">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="sectionIndexBackgroundColor" red="0.20784313730000001" green="0.3803921569" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="separatorColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellIdentifier" textLabel="2iE-AE-0e7" style="IBUITableViewCellStyleDefault" id="rh3-Ma-j2I">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="600" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rh3-Ma-j2I" id="FhP-Uh-aO8">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2iE-AE-0e7">
-                                                    <rect key="frame" x="15" y="0.0" width="570" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="570" height="60"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                    <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="20"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.20784313730000001" green="0.3803921569" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -404,6 +541,7 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="5ZP-bs-qGH" firstAttribute="top" secondItem="6k4-GI-HeF" secondAttribute="bottom" id="83j-bL-Lwc"/>
                             <constraint firstAttribute="trailing" secondItem="6k4-GI-HeF" secondAttribute="trailing" id="GCJ-qd-MUy"/>
@@ -589,6 +727,167 @@
     <resources>
         <image name="AppLogo" width="217" height="217"/>
         <image name="Background" width="640" height="960"/>
+        <image name="EnterpiLogo" width="101" height="32"/>
+        <image name="F23D8F9C-C108-4B65-A4A7-EAE31ED6E177" width="40" height="40">
+            <mutableData key="keyedArchiveRepresentation">
+YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
+GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
+c1dOU0NvbG9ygAKADRIgwAAAgAOAC1h7NDAsIDQwfdIVChYYWk5TLm9iamVjdHOhF4AEgArSFQoaHaIb
+HIAFgAaACRAA0iAKISJfEBROU1RJRkZSZXByZXNlbnRhdGlvboAHgAhPESGeTU0AKgAAGQgAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAAAkSAAEWEQAB
+FwgAAAoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAYAAAgQAAEWEgABFgcAAAoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAANgADRX4ACJ6pAAvUuwAM7LsADO2rAAvWhgAIpkUABFcJAAANAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAJQQAEUYAACKCoAAvSuwAM67sADOypAAvVggAI
+ojwAA0sBAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAfAAIpjQAJ
+sMwADf7WAA7/0QAO/80ADv/NAA7/0AAO/9QADv/SAA7/qQAK0koABV4BAAACAAAAAAAAAAAAAAAAAAAA
+AAAAAABEAARXpAAKzNEADv/UAA7/0QAO/80ADv/NAA7/0AAO/9QADv/OAA7/lQAJuScAAjIAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9AAROuQAM5tYADv/MAA7/ywAO/8sADv/LAA7/ywAO
+/8sADv/LAA7/ywAO/9EADv/RAA7/jAAJsBgAASAAAAAAAAAAABUAARuHAAio0AAO/9IADv/LAA7/ywAO
+/8sADv/LAA7/ywAO/8sADv/LAA7/zAAO/9QADv/CAAzuSAAEWwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAABDAARVyAAN9dEADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/zAAO
+/9QADv+xAAvcMQADPisAAzesAAvW1gAO/8wADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO
+/8sADv/LAA7/0AAO/8sADfpNAARiAAAAAAAAAAAAAAAAAAAAAAAAAAAsAAM4wQAM8NAADv/LAA7/ywAO
+/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/0QAO/78ADPC8AAzu0QAO
+/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/OAA7/yQAN
+9zgAA0gAAAAAAAAAAAAAAAAJAAANogAKzdMADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO
+/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/NAA7/zQAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO
+/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/9IADv+vAAvbEAABFgAAAAAAAAAAVgAF
+btQADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO
+/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO
+/8sADv/LAA7/ywAO/8sADv/LAA7/1wAO/2YABoEAAAAABwAACacAC9LRAA7/ywAO/8sADv/LAA7/ywAO
+/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO
+/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO
+/9AADv+yAAzgDgABES8AAzzLAA38zAAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO
+/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO
+/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/0AAO/z4ABE9sAAaJ0gAO
+/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO
+/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO
+/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/9AADv+OAAmzrQAL280ADv/LAA7/ywAO/8sADv/LAA7/ywAO
+/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO
+/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO
+/8sADv/MAA7/uwAM7MIADPXMAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO
+/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO
+/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/zAAO/8EADPS6AAzqzAAO
+/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO
+/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO
+/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8wADv++AAzxhQAIqdAADv/LAA7/ywAO/8sADv/LAA7/ywAO
+/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO
+/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO
+/8sADv/OAA7/pgAK0kAABFHRAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO
+/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO
+/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/0gAO/1YABW4RAAEXtwAM
+6M4ADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO
+/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO
+/8sADv/LAA7/ywAO/8sADv/LAA7/zQAO/8AADPIbAAIiAAAAAHYAB5XWAA7/ywAO/8sADv/LAA7/ywAO
+/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO
+/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO
+/9QADv+FAAioAAAAAAAAAAAcAAElvAAM7dAADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO
+/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO
+/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/80ADv/EAA30JwACMgAAAAAAAAAAAAAA
+AFMABWrSAA7/zAAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO
+/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO
+/8sADv/LAA7/ywAO/8wADv/UAA7/YgAGfAAAAAAAAAAAAAAAAAAAAAAAAAACcgAHkdQADv/MAA7/ywAO
+/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO
+/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8wADv/UAA7/fgAI
+nwMAAAUAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAVtAAeK0QAO/80ADv/LAA7/ywAO/8sADv/LAA7/ywAO
+/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO
+/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8wADv/SAA7/egAImAYAAAgAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAFwABnXMAA37zgAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO
+/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO
+/84ADv/QAA7/aQAGhAEAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAF
+YcUADPTQAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO
+/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/9AADv/JAAz3VgAFbQAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+AAROvQAM7NEADv/LAA7/ywAO
+/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO/8sADv/LAA7/ywAO
+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
+bHVjAAAAAAAAAB8AAAAMc2tTSwAAACgAAAGEZGFESwAAAC4AAAGsY2FFUwAAACQAAAHadmlWTgAAACQA
+AAH+cHRCUgAAACYAAAIidWtVQQAAACoAAAJIZnJGVQAAACgAAAJyaHVIVQAAACgAAAKaemhUVwAAABYA
+AALCbmJOTwAAACYAAALYY3NDWgAAACIAAAL+aGVJTAAAAB4AAAMgaXRJVAAAACgAAAM+cm9STwAAACQA
+AANmZGVERQAAACwAAAOKa29LUgAAABYAAAO2c3ZTRQAAACYAAALYemhDTgAAABYAAAPMamFKUAAAABoA
+AAPiZWxHUgAAACIAAAP8cHRQTwAAACYAAAQebmxOTAAAACgAAAREZXNFUwAAACYAAAQedGhUSAAAACQA
+AARsdHJUUgAAACIAAASQZmlGSQAAACgAAASyaHJIUgAAACgAAATacGxQTAAAACwAAAUCcnVSVQAAACIA
+AAUuYXJFRwAAACYAAAVQZW5VUwAAACYAAAV2AFYBYQBlAG8AYgBlAGMAbgD9ACAAUgBHAEIAIABwAHIA
+bwBmAGkAbABHAGUAbgBlAHIAZQBsACAAUgBHAEIALQBiAGUAcwBrAHIAaQB2AGUAbABzAGUAUABlAHIA
+ZgBpAGwAIABSAEcAQgAgAGcAZQBuAOgAcgBpAGMAQx6lAHUAIABoAOwAbgBoACAAUgBHAEIAIABDAGgA
+dQBuAGcAUABlAHIAZgBpAGwAIABSAEcAQgAgAEcAZQBuAOkAcgBpAGMAbwQXBDAEMwQwBDsETAQ9BDgE
+OQAgBD8EQAQ+BEQEMAQ5BDsAIABSAEcAQgBQAHIAbwBmAGkAbAAgAGcA6QBuAOkAcgBpAHEAdQBlACAA
+UgBWAEIAwQBsAHQAYQBsAOEAbgBvAHMAIABSAEcAQgAgAHAAcgBvAGYAaQBskBp1KAAgAFIARwBCACCC
+cl9pY8+P8ABHAGUAbgBlAHIAaQBzAGsAIABSAEcAQgAtAHAAcgBvAGYAaQBsAE8AYgBlAGMAbgD9ACAA
+UgBHAEIAIABwAHIAbwBmAGkAbAXkBegF1QXkBdkF3AAgAFIARwBCACAF2wXcBdwF2QBQAHIAbwBmAGkA
+bABvACAAUgBHAEIAIABnAGUAbgBlAHIAaQBjAG8AUAByAG8AZgBpAGwAIABSAEcAQgAgAGcAZQBuAGUA
+cgBpAGMAQQBsAGwAZwBlAG0AZQBpAG4AZQBzACAAUgBHAEIALQBQAHIAbwBmAGkAbMd8vBgAIABSAEcA
+QgAg1QS4XNMMx3xmbpAaACAAUgBHAEIAIGPPj/Blh072TgCCLAAgAFIARwBCACAw1zDtMNUwoTCkMOsD
+kwO1A70DuQO6A8wAIAPAA8EDvwPGA68DuwAgAFIARwBCAFAAZQByAGYAaQBsACAAUgBHAEIAIABnAGUA
+bgDpAHIAaQBjAG8AQQBsAGcAZQBtAGUAZQBuACAAUgBHAEIALQBwAHIAbwBmAGkAZQBsDkIOGw4jDkQO
+Hw4lDkwAIABSAEcAQgAgDhcOMQ5IDicORA4bAEcAZQBuAGUAbAAgAFIARwBCACAAUAByAG8AZgBpAGwA
+aQBZAGwAZQBpAG4AZQBuACAAUgBHAEIALQBwAHIAbwBmAGkAaQBsAGkARwBlAG4AZQByAGkBDQBrAGkA
+IABSAEcAQgAgAHAAcgBvAGYAaQBsAFUAbgBpAHcAZQByAHMAYQBsAG4AeQAgAHAAcgBvAGYAaQBsACAA
+UgBHAEIEHgQxBEkEOAQ5ACAEPwRABD4ERAQ4BDsETAAgAFIARwBCBkUGRAZBACAGKgY5BjEGSgZBACAA
+UgBHAEIAIAYnBkQGOQYnBkUARwBlAG4AZQByAGkAYwAgAFIARwBCACAAUAByAG8AZgBpAGwAZXRleHQA
+AAAAQ29weXJpZ2h0IDIwMDcgQXBwbGUgSW5jLiwgYWxsIHJpZ2h0cyByZXNlcnZlZC4AWFlaIAAAAAAA
+APNSAAEAAAABFs9YWVogAAAAAAAAdE0AAD3uAAAD0FhZWiAAAAAAAABadQAArHMAABc0WFlaIAAAAAAA
+ACgaAAAVnwAAuDZjdXJ2AAAAAAAAAAEBzQAAc2YzMgAAAAAAAQxCAAAF3v//8yYAAAeSAAD9kf//+6L/
+//2jAAAD3AAAwGzSJSYnKFokY2xhc3NuYW1lWCRjbGFzc2VzXxAQTlNCaXRtYXBJbWFnZVJlcKMnKSpa
+TlNJbWFnZVJlcFhOU09iamVjdNIlJiwtV05TQXJyYXmiLCrSJSYvMF5OU011dGFibGVBcnJheaMvLCrT
+MjMKNDU2V05TV2hpdGVcTlNDb2xvclNwYWNlRDAgMAAQA4AM0iUmODlXTlNDb2xvcqI4KtIlJjs8V05T
+SW1hZ2WiOypfEA9OU0tleWVkQXJjaGl2ZXLRP0BUcm9vdIABAAgAEQAaACMALQAyADcARgBMAFcAXgBl
+AHIAeQCBAIMAhQCKAIwAjgCXAJwApwCpAKsArQCyALUAtwC5ALsAvQDCANkA2wDdIn8ihCKPIpgiqyKv
+IroiwyLIItAi0yLYIuci6yLyIvojByMMIw4jECMVIx0jICMlIy0jMCNCI0UjSgAAAAAAAAIBAAAAAAAA
+AEEAAAAAAAAAAAAAAAAAACNMA
+</mutableData>
+        </image>
         <image name="Logo_Color" width="153" height="141"/>
+        <image name="MenuIcon" width="25" height="25"/>
+        <image name="RootBlurImage" width="414" height="736"/>
     </resources>
 </document>

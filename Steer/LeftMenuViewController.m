@@ -23,6 +23,13 @@
     [super viewDidLoad];
     [self initializeObjects];
     // Do any additional setup after loading the view.
+    CGRect tableFrame = self.leftMenuTableView.frame;
+    self.leftMenuTableView.translatesAutoresizingMaskIntoConstraints = YES;
+
+    [self.leftMenuTableView setBackgroundColor:[UIColor clearColor]];
+
+    int yAxis_Center = ((self.view.frame.size.height)-(_menuNamesArray.count*60))/2;
+       self.leftMenuTableView.frame = CGRectMake(self.leftMenuTableView.frame.origin.x, yAxis_Center, tableFrame.size.width,  _menuNamesArray.count*60);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,8 +41,9 @@
 
 - (void)initializeObjects {
     
-    self.menuNamesArray = [[NSArray alloc] initWithObjects:@"My Location", @"How it works?", @"About us", @"Credits", nil];
-    
+//    self.menuNamesArray = [[NSArray alloc] initWithObjects:@"My Location", @"How it works?", @"About us", @"Credits", nil];
+    self.menuNamesArray = [[NSArray alloc] initWithObjects:@"MY LOCATION", @"HOW IT WORKS?", @"ABOUT US", @"CREDITS", nil];
+
 }
 
 
@@ -50,7 +58,7 @@
     UITableViewCell *leftMenuCell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"cellIdentifier" forIndexPath:indexPath];
     
     leftMenuCell.textLabel.text = self.menuNamesArray[indexPath.row];
-    
+
     return leftMenuCell;
 }
 
@@ -62,7 +70,8 @@
 
     switch (indexPath.row) {
         case 0: {
-            [self.sideMenuViewController setContentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"ZonesListNavigationController"]
+
+            [self.sideMenuViewController setContentViewController:self.sideMenuViewController.zonesListViewController
                                                          animated:YES];
             [self.sideMenuViewController hideMenuViewController];
         }
@@ -71,7 +80,7 @@
         case 1:
         case 2: {
             
-            UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"" message:@"Work is under progress" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"" message:@"Work in progress" preferredStyle:UIAlertControllerStyleAlert];
             
             UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 [self.sideMenuViewController hideMenuViewController];
@@ -97,7 +106,6 @@
     }
     
 }
-
 
 
 /*

@@ -12,27 +12,34 @@
 #import <IndoorsSDK/IndoorsSurfaceBuilder.h>
 #import "NavigationViewController.h"
 #import <PulsingHalo/PulsingHaloLayer.h>
+#import <QuartzCore/QuartzCore.h>
 
 @interface ZonesListViewController () <IndoorsServiceDelegate, ISIndoorsSurfaceViewControllerDelegate, IndoorsLocationListener, RoutingDelegate, IndoorsSurfaceViewDelegate, UITableViewDelegate, ZoneListViewController>
 {
     ISIndoorsSurfaceViewController *_indoorsSurfaceViewController;
 }
 
+// IBOutlets
 @property (weak, nonatomic) IBOutlet UIView *currentLocationHolderView;
 @property (weak, nonatomic) IBOutlet UITableView *zonesListTableView;
-@property (strong, nonatomic) NSMutableArray *zonesDataArray;
+@property (weak, nonatomic) IBOutlet UIButton *menuButton;
 
-@property (strong, nonatomic) ISImageAnnotationView *endLocPointerImgView;
 @property (weak, nonatomic) IBOutlet UIImageView *logoImgView;
 @property (weak, nonatomic) IBOutlet UIView *loadingView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *imgViewVerticalSpacingConstraint;
+
+@property (weak, nonatomic) IBOutlet UILabel *currentLocationLabel;
+
+// Global Variables
+
+@property (strong, nonatomic) NSMutableArray *zonesDataArray;
+@property (strong, nonatomic) ISImageAnnotationView *endLocPointerImgView;
 
 @property(nonatomic, retain) ISIndoorsSurface *surfaceBuilder;
 @property(nonatomic, retain) Indoors *indoors;
 @property (strong, nonatomic) IDSBuilding *currentBuilding;
 @property (strong, nonatomic) IDSCoordinate *currentLocation;
 @property (strong, nonatomic) IDSZone *sourceZone;
-@property (weak, nonatomic) IBOutlet UILabel *currentLocationLabel;
 @property (strong, nonatomic) NavigationViewController *nvc;
 
 
@@ -42,13 +49,14 @@
 
 #pragma mark - View LifeCycle Methods
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self initializeObjects];
-    
-   
 }
+
+#pragma mark - ViewLifeCycle Methods
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -56,29 +64,41 @@
     [self.navigationItem setHidesBackButton:YES];
 
     _indoorsSurfaceViewController.delegate = self;
+    _indoorsSurfaceViewController.surfaceView.delegate = self;
     [[Indoors instance] registerLocationListener:self];
     
 }
 
 
-- (void)viewDidAppear:(BOOL)animated {
-    
-    PulsingHaloLayer *halo = [PulsingHaloLayer layer];
-    halo.position = _logoImgView.center;
-    halo.haloLayerNumber = 4;
-    halo.radius = CGRectGetWidth(self.view.frame)/4;
-    //    halo.backgroundColor = [UIColor colorWithRed:0.7
-    //                                           green:0.9
-    //                                            blue:0.3
-    //                                           alpha:1.0].CGColor;
-    
-    [_loadingView.layer addSublayer:halo];
-    [halo start];
+- (void)viewDidAppear:(BOOL)animated
+{
+
+    [self addAnimation];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addAnimation) name:UIApplicationWillEnterForegroundNotification object:nil];
+}
+
+- (void)addAnimation
+{
+    if(!self.loadingView.isHidden)
+    {
+        PulsingHaloLayer *halo = [PulsingHaloLayer layer];
+        halo.position = _logoImgView.center;
+        halo.haloLayerNumber = 4;
+        halo.radius = CGRectGetWidth(self.view.frame)/4;
+        //    halo.backgroundColor = [UIColor colorWithRed:0.7
+        //                                           green:0.9
+        //                                            blue:0.3
+        //                                           alpha:1.0].CGColor;
+
+        [_loadingView.layer addSublayer:halo];
+        [halo start];
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
 
     _indoorsSurfaceViewController.delegate = nil;
+    _indoorsSurfaceViewController.surfaceView.delegate = nil;
     [[Indoors instance] registerLocationListener:nil];
 
 }
@@ -88,6 +108,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 #pragma mark - Private API
 
@@ -367,8 +388,19 @@ heightForHeaderInSection:(NSInteger)section {
 
 }
 
-
-
+//- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag;
+//{
+//    
+//}
+//
+//-(id)presentationLayer
+//{
+//    CALayer *temp;
+//    if ([[transMask animationKeys] count] > 0) {
+//        temp = (CALayer *) [transMask presentationLayer];
+//        [transMask setPosition:[temp position]];
+//    }
+//}
 
 /*
 #pragma mark - Navigation
