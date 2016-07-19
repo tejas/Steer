@@ -40,6 +40,7 @@
 @property (strong, readwrite, nonatomic) IBInspectable NSString *rightMenuViewStoryboardID;
 #endif
 
+@property (strong, readwrite, nonatomic) UIViewController *zonesListViewController;
 @property (strong, readwrite, nonatomic) UIViewController *contentViewController;
 @property (strong, readwrite, nonatomic) UIViewController *leftMenuViewController;
 @property (strong, readwrite, nonatomic) UIViewController *rightMenuViewController;

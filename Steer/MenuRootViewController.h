@@ -10,6 +10,4 @@
 
 @interface MenuRootViewController : RESideMenu <RESideMenuDelegate>
 
-@property (strong, readwrite, nonatomic) UIViewController *zonesListViewController;
-
 @end
